@@ -1,0 +1,99 @@
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<head>
+	<title>Les composant primefaces</title>
+</head>
+
+<h:body>
+	<h1>Accordion Panel</h1>
+	<p:accordionPanel>
+		<p:tab title="Introduction JSF">
+		Une petite description....
+		</p:tab>
+		<p:tab title="Les composants HTML de JSF">
+		Une petite description....
+		</p:tab>
+		<p:tab title="Les composants  primefaces">
+		Une petite description....
+		</p:tab>
+	</p:accordionPanel>
+	<h1>Le composant caroucel de primefaces</h1>
+	<p:carousel autoplayInterval="2000" effect="easeInStrong" circular="true" itemStyle="width:200px">
+		<p:graphicImage width="200px" value="/images/Moitié De Pain.jpg" />
+		<p:graphicImage width="200px" value="/images/Pain Au Chocolat.jpg" />
+		<p:graphicImage width="200px" value="/images/Paris.jpg" />
+		<p:graphicImage width="200px" value="/images/Pain Au Chocolat.jpg" />
+	</p:carousel>
+	<h1>composant Galeria</h1>
+	<p:galleria  var="img" value="#{etudiantBean.etudiant.images}">
+		<p:graphicImage width="50%"  value="/images/#{img}" styleClass="content"></p:graphicImage>
+	</p:galleria>
+	<h1>Color Picker</h1>
+	<h:form>
+	<p:outputLabel value="Votre couleur:" />
+		<p:colorPicker value="#{etudiantBean.etudiant.couleur}" mode="inline" />
+		<p:commandButton value="Valider" />
+		Votre couleur préférée est: <h:outputText value="#{etudiantBean.etudiant.couleur}"></h:outputText>
+	</h:form>
+	
+</h:body>
+</html>
+ -->
+ 
+ <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>PrimeFaces Example</title>
+</h:head>
+<h:body>
+    <h1>Accordion Panel</h1>
+    <p:accordionPanel>
+        <p:tab title="Introduction JSF">
+            Une petite description....
+        </p:tab>
+        <p:tab title="Les composants HTML de JSF">
+            Une petite description....
+        </p:tab>
+        <p:tab title="Les composants PrimeFaces">
+            Une petite description....
+        </p:tab>
+    </p:accordionPanel>
+
+    <h1>Le composant carousel de PrimeFaces</h1>
+    <p:carousel autoplayInterval="2000" effect="easeInStrong" circular="true" itemStyle="width:200px">
+        <p:graphicImage width="200px" value="/images/Moitié De Pain.jpg" />
+
+        <p:graphicImage width="100%" value="/images/Pain Au Chocolat.jpg" />
+        <p:graphicImage width="100%" value="/images/Paris.jpg" />
+        <p:graphicImage width="100%" value="/images/Pain Au Chocolat.jpg" />
+        <p:graphicImage width="100%" value="/images/Moitié De Pain.jpg" />
+
+        <p:graphicImage width="100%" value="/images/Pain Au Chocolat.jpg" />
+        <p:graphicImage width="100%" value="/images/Paris.jpg" />
+        <p:graphicImage width="100%" value="/images/Pain Au Chocolat.jpg" />
+    </p:carousel>
+
+    <h1>Composant Galleria</h1>
+    <p:galleria var="img" value="#{etudiantBean.etudiant.images}">
+        <p:graphicImage width="100%" value="/images/#{img}" styleClass="content" />
+    </p:galleria>
+
+    <h1>Color Picker</h1>
+    <h:form>
+        <p:outputLabel value="Votre couleur:" />
+        <p:colorPicker value="#{etudiantBean.etudiant.couleur}" mode="inline" />
+        <p:commandButton value="Valider" />
+        Votre couleur préférée est: <h:outputText value="#{etudiantBean.etudiant.couleur}" />
+    </h:form>
+</h:body>
+</html>
+ 

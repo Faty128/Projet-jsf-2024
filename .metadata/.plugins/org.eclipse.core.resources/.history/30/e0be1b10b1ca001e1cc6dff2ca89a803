@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package com.gestion.etudiant.bean;
+
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
+
+/**
+ * 
+ */
+@RequestScoped
+@Named
+public class EtudiantBean {
+
+}

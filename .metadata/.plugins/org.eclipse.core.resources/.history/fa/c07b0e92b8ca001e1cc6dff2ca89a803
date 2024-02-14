@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* Style pour le tableau */
+table {
+    width: 100%; /* Le tableau occupe 100% de la largeur disponible */
+    border-collapse: collapse; /* Les bordures des cellules sont fusionnées */
+}
+
+/* Style pour les en-têtes de colonnes */
+th {
+    background-color: #f2f2f2; /* Couleur de fond gris clair */
+    border: 1px solid #dddddd; /* Bordure de 1px solide gris */
+    padding: 8px; /* Espace intérieur de 8px */
+    text-align: left; /* Alignement du texte à gauche */
+}
+
+/* Style pour les cellules de données */
+td {
+    border: 1px solid #dddddd; /* Bordure de 1px solide gris */
+    padding: 8px; /* Espace intérieur de 8px */
+    text-align: left; /* Alignement du texte à gauche */
+}
+
+/* Style pour les lignes alternées (optionnel) */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Couleur de fond gris clair pour les lignes paires */
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+
+		xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+
+	<h:head><title>Gestion des Personnes</title></h:head>
+	<h:body>
+		<div>
+			<h1>Liste des personnes</h1>
+			
+	<h:form>
+		
+		<h:outputLabel value="Nom: " />
+		<h:inputText a:placeholder="Votre nom" value="#{personne.nom}" /> <br/><br/>
+		
+		<h:outputLabel value="Prenom: " />
+		<h:inputText a:placeholder="Votre prenom" value="#{personne.prenom}" /> <br/><br/>
+		
+		<h:outputLabel value="Password: " />
+		<h:inputSecret redisplay="false" a:placeholder="Votre mot de passe" value="#{personne.password}" /> <br/><br/>
+		
+		<h:outputLabel value="Size =5 " />
+		<h:inputText a:placeholder="size" size="5" value="123456" /> <br/><br/>
+		
+		<h:outputLabel value="MaxLength =6 et size =10 " />
+		<h:inputSecret size="10" maxlength="6" a:placeholder="Votre mot de passe" value="123456789" /> <br/><br/>
+		
+		<h:outputLabel value="Ville: " />
+		<h:selectOneMenu value="#{personne.ville}">
+			<f:selectItem itemValue="Thiés" itemLabel="Thiés" />
+			<f:selectItem itemValue="Louga" itemLabel="Louga" />
+			<f:selectItem itemValue="Mbour" itemLabel="Mbour" />
+			<f:selectItem itemValue="Dakar" itemLabel="Dakar" />
+			<f:selectItem itemValue="Zighinchor" itemLabel="Zighinchor" />
+		</h:selectOneMenu> <br/><br/>
+		
+		<h:outputLabel value="Pays: " />
+		<h:selectOneMenu value="#{personn.pays}">
+			<f:selectItems value="#{personn.listPays}" />
+		</h:selectOneMenu> <br/><br/>
+		
+		<h:outputLabel value="Adresse: " />
+		<h:inputTextarea rows="10" cols="30" a:placeholder="Votre adresse" value="#{personne.adresse}" /> <br/><br/>
+		
+		<h:commandLink immediate="true" action="/test.xhtml" value="Lien vers test" />
+		<br/><br/>
+		<h:commandButton action="laRepons" value="Envoyer" />
+	
+	</h:form>
+			
+			<div class="#{laRepons.modif?'cache':'null'}">
+			<h1>Cree une Peronne</h1>
+			<h:form>
+				<h:panelGrid columns="2" cellpadding="3">
+					
+					<h:message for="username1" /><br/>
+						<p:outputLabel for="username1" styleClass="block">Nom</p:outputLabel>
+						<p:inputText id="username1" styleClass="block" value="#{laReponse.personne.nom}" a:placeholder="votre nom"
+						validatorMessage="Enter votre nom." rendered="true"/>
+						
+						<h:message for="username2" /><br/>
+						<p:outputLabel for="username2" styleClass="block">Prenom</p:outputLabel>
+						<p:inputText id="username2" styleClass="block" value="#{laReponse.personne.prenom}" a:placeholder="votre prenom"
+						validatorMessage="Enter votre prenom." renquired="true"/>
+						
+						<h:message for="dateNais" /><br/>
+						<p:outputLabel for="dateNais" styleClass="block">Date de naissance</p:outputLabel>
+						
+						<p:calendar id="dateNais" value="#{laReponse.date}" required="true" a:placeholder="votre date de naissance"
+						pattern="yyyy-MM-dd" mode="popup" showOn="button" validatorMessage="Enter votre date de naissance.">
+						
+						</p:calendar>
+						<h:commandButton action="#{laReponse.ajoutPersonn()}"
+						value="Ajouter une personne" />
+				</h:panelGrid>
+				<br/>
+			</h:form>	
+			</div>
+		</div>
+	</h:body>
+</html>

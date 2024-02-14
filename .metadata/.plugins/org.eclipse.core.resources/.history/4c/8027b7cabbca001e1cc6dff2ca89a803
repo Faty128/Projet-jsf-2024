@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<head>
+    <title>Liste des étudiants</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+</head>
+
+<h:body>
+	<p:accordionPanel>
+		<p:tab title="liste étudiant">
+			<f:view>
+				<h:form>
+					<h:outputText value="Liste des étudiants"></h:outputText>
+<!-- 		<p:dataTable var="etu" styleClass="margin: auto; text-align: left;" value="#{etudiantBean.listeEtudiant}"> -->
+<!--     <p:column> -->
+<!--         <f:facet name="header">Id</f:facet> -->
+<!--         #{etu.id} -->
+<!--     </p:column> -->
+<!--     <p:column> -->
+<!--         <f:facet name="header">Nom</f:facet> -->
+<!--         #{etu.nom} -->
+<!--     </p:column> -->
+<!--     <p:column> -->
+<!--         <f:facet name="header">Prenom</f:facet> -->
+<!--         #{etu.prenom} -->
+<!--     </p:column> -->
+<!--     <p:column> -->
+<!--         <f:facet name="header">Date de naissance</f:facet> -->
+<!--         #{etu.dateNais} -->
+<!--     </p:column> -->
+<!-- </p:dataTable> -->
+
+<p:dataTable var="etu" value="#{etudiantBean.listeEtudiant}">
+    <p:column headerText="Id">
+        #{etu.id}
+    </p:column>
+    <p:column headerText="Nom">
+        #{etu.nom}
+    </p:column>
+    <p:column headerText="Prénom">
+        #{etu.prenom}
+    </p:column>
+    <p:column headerText="Date de naissance">
+        #{etu.dateNais}
+    </p:column>
+</p:dataTable>
+
+
+
+				</h:form>
+			</f:view>
+		</p:tab>
+	</p:accordionPanel>
+</h:body>
+
+</html>

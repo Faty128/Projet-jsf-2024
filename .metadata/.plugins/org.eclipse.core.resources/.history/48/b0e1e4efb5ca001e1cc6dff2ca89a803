@@ -1,0 +1,18 @@
+<p:dataTable var="etu" style="margin: auto; text-align: left;" value="#{etudiantBean.listeEtudiant">
+    <p:column>
+        <f:facet name="header">Id</f:facet>
+        #{etu.id}
+    </p:column>
+    <p:column>
+        <f:facet name="header">Nom</f:facet>
+        #{etu.nom}
+    </p:column>
+    <p:column>
+        <f:facet name="header">Prenom</f:facet>
+        #{etu.prenom}
+    </p:column>
+    <p:column>
+        <f:facet name="header">Date de naissance</f:facet>
+        #{etu.dateNais}
+    </p:column>
+</p:dataTable>

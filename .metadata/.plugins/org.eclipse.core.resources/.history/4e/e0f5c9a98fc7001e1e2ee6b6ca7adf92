@@ -1,0 +1,90 @@
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+</h:head>
+<h:body>
+	<h:form>
+	
+		<p:outputLabel value="Prénom: " />
+		<p:inputText value="#{etudiantBean.etudiant.prenom}" /> <br /><br />
+		<p:outputLabel value="Nom: " />
+		<p:inputText value="#{etudiantBean.etudiant.nom}"/> <br /><br />
+		<p:outputLabel value="Date de naissance: " />
+		<h:message for="dateNais"></h:message>
+		<p:calendar id="dateNais" value="#{etudiantBean.etudiant.dateNais}"
+			required="true" requiredMessage="Ce champ est obligatoir" showOn="doth">
+			
+		</p:calendar> <br /><br />
+			<p:accordionPanel width="500" value="#{etudiantBean.etudiant.motivation}"></p:accordionPanel>
+		 
+		 <p:accordionPanel value="#{etudiantBean.etudiant.motivation}">
+    <p:tab title="Onglet 1">
+        Contenu de l'onglet 1
+    </p:tab>
+    <p:tab title="Onglet 2">
+        Contenu de l'onglet 2
+    </p:tab>
+</p:accordionPanel>
+		 
+		<h:commandButton action="laReponse" value="Envoyer"></h:commandButton>
+		
+	</h:form>
+
+</h:body>
+</html>
+ -->
+ 
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+</h:head>
+<h:body>
+	<h:form>
+		<p:outputLabel value="Prénom: " />
+		<p:inputText value="#{etudiantBean.etudiant.prenom}" /> <br /><br />
+		<p:outputLabel value="Nom: " />
+		<p:inputText value="#{etudiantBean.etudiant.nom}"/> <br /><br />
+		<p:outputLabel value="Date de naissance: " />
+		<h:message for="dateNais"/>
+		<p:calendar id="dateNais" value="#{etudiantBean.etudiant.dateNais}"
+			required="true" requiredMessage="Ce champ est obligatoire" showOn="doth">
+		</p:calendar> <br /><br />
+		<p:outputLabel value="Motivation: " />
+		<p:accordionPanel value="#{etudiantBean.etudiant.motivation}">
+			<p:tab title="Onglet 1">
+				Contenu de l'onglet 1
+			</p:tab>
+			<p:tab title="Onglet 2">
+				Contenu de l'onglet 2
+			</p:tab>
+		</p:accordionPanel>
+		<h:commandButton action="laReponse" value="Envoyer"></h:commandButton>
+	</h:form>
+		 <h1>Composant Dock de primefaces</h1> 
+ <p:dock>
+    <p:menuitem value="Home" icon="/img/home.png" url="http://localhost:8080/Primefaces/form.xhtml" />
+    <p:menuitem value="Music" icon="/img/music.jpg" url="#" />
+    <p:menuitem value="History" icon="/img/hystory.jpg" url="#" />
+    <p:menuitem value="Email" icon="/img/email.png" url="#" />
+    <p:menuitem value="Link" icon="/img/link.jpg" url="#" />
+    <p:menuitem value="RSS" icon="/img/rss.png" url="#" />
+</p:dock>
+</h:body>
+</html>
+ 

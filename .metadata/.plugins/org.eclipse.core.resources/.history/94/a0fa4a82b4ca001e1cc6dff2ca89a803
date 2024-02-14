@@ -1,0 +1,88 @@
+/**
+ * 
+ */
+package com.gestion.etudiant.bean;
+
+import java.util.Date;
+
+/**
+ * 
+ */
+public class Etudiant {
+	public static int id = 0;
+	private String nom;
+	private String prenom;
+	private Date dateNais;
+	
+	public Etudiant() {
+		id = id + 1;
+	}
+	
+	
+	/**
+	 * @param nom
+	 * @param prenom
+	 * @param dateNais
+	 */
+	public Etudiant(String nom, String prenom, Date dateNais) {
+		super();
+		id = id + 1;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.dateNais = dateNais;
+	}
+
+
+
+
+	/**
+	 * @return the id
+	 */
+	public static int getId() {
+		return id;
+	}
+	/**
+	 * @param id the id to set
+	 */
+	public static void setId(int id) {
+		Etudiant.id = id;
+	}
+	/**
+	 * @return the nom
+	 */
+	public String getNom() {
+		return nom;
+	}
+	/**
+	 * @param nom the nom to set
+	 */
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	/**
+	 * @return the prenom
+	 */
+	public String getPrenom() {
+		return prenom;
+	}
+	/**
+	 * @param prenom the prenom to set
+	 */
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+	/**
+	 * @return the dateNais
+	 */
+	public Date getDateNais() {
+		return dateNais;
+	}
+	/**
+	 * @param dateNais the dateNais to set
+	 */
+	public void setDateNais(Date dateNais) {
+		this.dateNais = dateNais;
+	}
+	
+	
+}

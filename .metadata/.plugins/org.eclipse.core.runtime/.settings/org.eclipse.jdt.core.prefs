@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
+org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=21
+org.eclipse.jdt.core.compiler.compliance=21
+org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
+org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
+org.eclipse.jdt.core.compiler.release=enabled
+org.eclipse.jdt.core.compiler.source=21
+org.eclipse.jdt.core.userLibrary.bgi=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="true" version\="2">\r\n\t<archive path\="C\:/Users/LEOVO/Documents/cdi/cdi-api-1.1.jar"/>\r\n</userlibrary>\r\n
+org.eclipse.jdt.core.userLibrary.java=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="true" version\="2">\r\n\t<archive path\="C\:/Users/LEOVO/Downloads/javax.faces-2.3.0 (1).jar"/>\r\n\t<archive path\="C\:/Users/LEOVO/Documents/cdi/javax-inject.jar"/>\r\n</userlibrary>\r\n
+org.eclipse.jdt.core.userLibrary.javas=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="true" version\="2">\r\n\t<archive path\="C\:/Users/LEOVO/Documents/cdi/javax-inject.jar"/>\r\n</userlibrary>\r\n
+org.eclipse.jdt.core.userLibrary.jsf=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="2">\r\n\t<archive path\="C\:/Users/LEOVO/Downloads/javax.faces-2.3.0 (1).jar"/>\r\n</userlibrary>\r\n
+org.eclipse.jdt.core.userLibrary.primefaces=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="true" version\="2">\r\n\t<archive path\="C\:/Users/LEOVO/Downloads/primefaces-13.0.1.jar"/>\r\n</userlibrary>\r\n

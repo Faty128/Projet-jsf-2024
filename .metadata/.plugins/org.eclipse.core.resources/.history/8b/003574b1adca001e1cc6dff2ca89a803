@@ -1,0 +1,11 @@
+/**
+ * 
+ */
+package com.gestion.etudiant.bean;
+
+/**
+ * 
+ */
+public class Etudiant {
+
+}
