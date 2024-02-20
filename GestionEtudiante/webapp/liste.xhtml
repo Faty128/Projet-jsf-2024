@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+
+<f:metadata>
+	<f:event listener="#{etudiantBean.chargerListeEtudiant}"
+		type="preRenderView"></f:event>
+</f:metadata>
+
+<h:head>
+	<title>Liste des etudiants</title>
+</h:head>
+<h:body>
+	<h1>Formulaire d' inscription</h1>
+	<h:form>
+		<p:panelGrid columns="3">
+			<p:outputLabel value="Nom: " />
+			<p:inputText value="#{etudiantBean.etudiant.nom}"
+				a:placeholder="Votre Nom: " />
+			<br />
+			<p:outputLabel value="Prénom: " />
+			<p:inputText value="#{etudiantBean.etudiant.prenom}"
+				a:placeholder="Votre Prénom: " />
+			<br />
+			<p:outputLabel value="Ville: " />
+			<p:inputText value="#{etudiantBean.etudiant.ville}"
+				a:placeholder="Votre Ville: " />
+			<br />
+
+			<h:commandButton value="Enregistrer"
+				action="#{etudiantBean.addEtudiant(etudiantBean.etudiant)}" />
+			<br />
+		</p:panelGrid>
+	</h:form>
+	<h1>Liste des étudiants</h1>
+	<h:form>
+		<p:dataTable value="#{etudiantBean.listeEtudiant}" var="e">
+			<p:column>
+				<f:facet name="header">ID</f:facet>
+			#{e.id}
+		</p:column>
+			<p:column>
+				<f:facet name="header">Nom</f:facet>
+			#{e.nom}
+		</p:column>
+			<p:column>
+				<f:facet name="header">Prénom</f:facet>
+			#{e.prenom}
+		</p:column>
+			<p:column>
+				<f:facet name="header">Ville</f:facet>
+			#{e.ville}
+		</p:column>
+			<p:column>
+				<f:facet name="header">Modifier</f:facet>
+				<p:commandLink value="Modifier"
+					action="#{etudiantBean.updateEtudiant(e.id)}" />
+
+
+			</p:column>
+			<p:column>
+				<f:facet name="header">Supprimer</f:facet>
+				<h:commandButton value="Supprimer"
+					onclick="if(!(confirm('Voulez-vous vraiment supprimer l'etudiant')))return false;"
+					action="#{etudiantBean.deleteEtudiant(e.id)}" />
+
+			</p:column>
+		</p:dataTable>
+	</h:form>
+</h:body>
+</html>
